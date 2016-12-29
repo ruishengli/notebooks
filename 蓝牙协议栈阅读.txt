@@ -1,0 +1,28 @@
+HCI Configuration Parameters 见 spec V2 Part E
+Air Interface Packets 见 spec V6 Part B
+HCI Commands and Event -- LE Controller Commands 见spec V2 Part E 7.8
+	
+   使用hcitool 模拟HCI COMMAND 使用set advertising data command(0x0008)时，parameters Length=32（默认，如果不满32 补00）,Set Scan Response Data 一样
+
+
+Android 蓝牙协议栈，默认参数定义见 stack -- include -- btm_ble_api.h
+		   常见code 见stack -- include -- gatt_api.h
+
+
+
+
+
+手机协议栈（bluedroid）默认参数定义位置： stack -- include -- btm_ble_api.h
+BTI F: Bluetooth Interface
+BTU : Bluetooth Upper Layer
+BTM: Bluetooth Manager 
+BTE  :Bluetooth embedded system
+BTA  :Blueetooth application layer
+CO: call out\CI: call in
+HF : Handsfree Profile
+HH: HID Host Profile
+HL: Health Device Profile
+AV:audio\vidio
+ag: audio gateway 
+ar: audio/video registration
+gattc: GATT client

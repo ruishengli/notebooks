@@ -1,0 +1,5 @@
+1：GATT (Generic Attribute Profile) 定义一个在蓝牙连接上发送和接受数据的通用规范
+2：GAP (Generic Access Profile) 控制设备连接和广播
+	定义的设备角色
+		Peripheral
+		Central
