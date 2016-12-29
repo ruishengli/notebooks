@@ -28,11 +28,11 @@ $ ssh-keygen -t rsa -C "youremail@example.com" 创建SSH Key
 
 
 ###################git 常用命令#######################
-
-1: git init . 把一个目录变成git管理的仓库
-2: git status  查看当前仓库的状态
-3: git add <filename> 添加单个文件到仓库
-4: git add -A 全部添加到仓库
-5: git commit -a -m "init" 提交添加的文件 -m <message> 注释
-6: git remote add origin git@github.com:ruishengli/test2.git 添加到远端仓库 
-7: git push -u origin master 把当前分支推送到远端，加上-u,不但会推送内容，还会把本地master分支和远程的master分支关联起来
+1: git remote -v 查看远程仓库地址
+2: git init . 把一个目录变成git管理的仓库
+3: git status  查看当前仓库的状态
+4: git add <filename> 添加单个文件到仓库
+5: git add -A 全部添加到仓库
+6: git commit -a -m "init" 提交添加的文件 -m <message> 注释
+7: git remote add origin git@github.com:ruishengli/test2.git 添加到远端仓库 
+8: git push -u origin master 把当前分支推送到远端，加上-u,不但会推送内容，还会把本地master分支和远程的master分支关联起来
