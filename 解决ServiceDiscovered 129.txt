@@ -1,0 +1,45 @@
+@Override
+        public void onServicesDiscovered(BluetoothGatt gatt, int status) {
+            if (status == BluetoothGatt.GATT_SUCCESS) {
+                broadcastUpdate(ACTION_GATT_SERVICES_DISCOVERED);
+            } else {
+                Log.w(TAG, "onServicesDiscovered received: " + status);
+               if(status == 129){
+                   mBluetoothAdapter.disable();
+
+                   new Timer().schedule(new TimerTask() {
+                       @Override
+                       public void run() {
+                            mBluetoothAdapter.enable();
+                       }
+                   }, 3000);
+
+
+                   new Timer().schedule(new TimerTask() {
+                       @Override
+                       public void run() {
+//                           Intent vIntent = new Intent(BluetoothLeService.this.getApplication(), BluetoothLeService.class);
+//                           ServiceConnection mServiceConnection = new ServiceConnection(){
+//
+//                               @Override
+//                               public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+//
+//                               }
+//
+//                               @Override
+//                               public void onServiceDisconnected(ComponentName componentName) {
+//
+//                               }
+//                           };
+//
+//                           bindService(vIntent, mServiceConnection, BIND_AUTO_CREATE);
+                           initialize();
+                           if(null != mDeviceAddress){
+                               connect(mDeviceAddress);
+                           }
+                       }
+                   }, 3000);
+
+               }
+            }
+        }
