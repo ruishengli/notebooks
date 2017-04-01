@@ -1,0 +1,19 @@
+1:给ImageView　设置逐帧动画
+
+ListView 滚回顶部， 经常忘记. 
+
+setSelection(0)
+
+listView.setSelectionAfterHeaderView();
+
+list.smoothScrollToPosition(0);
+
+
+3：Notification 可以设置在点击发送广播
+PendingIntent.getBroadcast(this.getApplicationContext(), 0, appIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+
+
+4：二维码扫描
+
+主要原理：
+ 1：
